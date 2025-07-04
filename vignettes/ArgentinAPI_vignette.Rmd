@@ -1,0 +1,120 @@
+---
+title: "ArgentinAPI: Access Argentine Economic, Social, and Geopolitical Data via RESTful APIs and Curated Datasets"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{ArgentinAPI: Access Argentine Economic, Social, and Geopolitical Data via RESTful APIs and Curated Datasets}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(ArgentinAPI)
+library(dplyr)
+library(ggplot2)
+```
+
+# Introduction
+
+The `ArgentinAPI` package provides a unified interface to access open data from the **ArgentinaDatos** API and the **REST Countries API**, with a focus on **Argentina**. It allows users to easily retrieve up-to-date information on exchange rates, inflation, political figures, national holidays, and country-level indicators relevant to **Argentina**.
+
+In addition to API-access functions, the package includes a collection of curated datasets related to **Argentina**, covering diverse domains such as economic indicators, biodiversity, agriculture, human rights, genetics, and consumer prices.
+
+`ArgentinAPI` is designed to support research, teaching, and data analysis focused on Argentina by integrating publicly available APIs and high-quality datasets into a single, easy-to-use R package.
+
+## Functions for ArgentinAPI
+
+The `ArgentinAPI` package provides several core functions to access real-time and structured information about Argentina from public APIs such as [ArgentinaDatos](https://argentinadatos.com/) and [REST Countries](https://restcountries.com/). Below is a list of the main functions included in the package:
+
+- `get_argentina_holidays()` – Retrieves public holidays in Argentina for a specific year using the ArgentinaDatos API.
+
+- `get_argentine_senators()` -  Returns the current list of Argentine senators from the ArgentinaDatos API.
+
+- `get_argentine_deputies()` – Returns the current list of Argentine deputies from the ArgentinaDatos API.
+
+- `get_country_info()` – Retrieves general country-level information about Argentina from the REST Countries API (e.g., population, area, time zones, etc.).
+
+- `get_dollar_exchange_rates()` – Retrieves the most recent exchange rates for different dollar markets (official, blue, MEP, CCL) from the ArgentinaDatos API.
+
+- `get_presidential_events()` – Retrieves a list of official presidential events from the ArgentinaDatos API.
+
+- `view_datasets_ArgentinAPI()` – Lists all curated datasets included in the `ArgentinAPI` package across various thematic areas such as economy, biodiversity, genetics, agriculture, and more.
+
+These functions allow users to access high-quality and structured information on Argentina, which can be combined with tools like `dplyr`, `tidyr`, and `ggplot2` to support a wide range of data analysis and visualization tasks. In the following sections, you’ll find examples on how to work with `ArgentinAPI` in practical scenarios.
+
+
+### List of Argentine Senators
+
+```{r argentine-senators,echo = TRUE,message = FALSE,warning = FALSE,results = 'markup'}
+
+# Display the first 10 Argentine senators
+
+argentine_senators <- head(get_argentine_senators(),n=10)
+
+print(argentine_senators)
+
+```
+
+
+### Corn Yield Response to Nitrogen Levels
+
+```{r corn-yield-plot, message=FALSE, warning=FALSE, fig.width=7, fig.height=5}
+
+# Summary: average corn yield by nitrogen level
+corn_summary <- corn_nitrogen_df %>%
+  group_by(nitro) %>%
+  summarise(
+    mean_yield = mean(yield, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# Plot: nitrogen vs. average corn yield
+ggplot(corn_summary, aes(x = nitro, y = mean_yield)) +
+  geom_line(color = "#1f77b4", size = 1) +
+  geom_point(size = 2, color = "#1f77b4") +
+  labs(
+    title = "Corn Yield by Nitrogen Level",
+    x = "Nitrogen Level (kg/ha)",
+    y = "Average Yield (quintals/ha)"
+  ) +
+  theme_minimal()
+
+
+```
+
+
+## Dataset Suffixes
+
+Each dataset in `ArgentinAPI` is labeled with a suffix to indicate its structure and type:
+
+- _df: A standard data frame.
+
+- _tbl_df: A tibble (modern data frame).
+
+- _ts: A time series object.
+
+- _matrix: A matrix structure.
+
+- _list: A list object.
+
+## Datasets Included in ArgentinAPI
+
+In addition to API access functions, `ArgentinAPI` provides several preloaded datasets offering insights into Argentina's economic, agricultural, demographic, and genetic indicators. Here are some featured examples:
+
+- `corn_nitrogen_df`: Argentina Corn Yield & Nitrogen Data
+A data frame with yield monitor data from a corn field in Argentina, including variables such as nitrogen application, yield, topography, and block replicates.
+
+- `STRs_argentina_list`: STRs Allelic Frequencies from Argentina
+A list of allelic frequencies for 24 Short Tandem Repeat (STR) genetic markers collected from different populations across Argentina.
+
+## Conclusion
+
+The `ArgentinAPI` package provides a powerful suite of tools to access public data from Argentina through curated datasets and API connectors. Whether analyzing economic trends, exploring georeferenced crop productivity, or studying population genetics, this package enables rich, reproducible analysis rooted in official and scientifically valuable data.
+
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>
