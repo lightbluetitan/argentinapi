@@ -27,7 +27,7 @@ library(ArgentinAPI)
 
 ```
 
-### ColombiAPI Functions
+### ArgentinAPI Functions
 
 - get_argentine_deputies() This function retrieves a list of Argentine deputies
 

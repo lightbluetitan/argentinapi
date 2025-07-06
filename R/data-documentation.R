@@ -195,7 +195,7 @@ NULL
 #'   \item{pais_nacimiento_indec_id}{INDEC code for country of birth}
 #' }
 #' @source Based on data from the presentes package (version 0.1.0).
-#'         Available at: \url{http://datos.jus.gob.ar/dataset/registro-unificado-de-victimas-del-terrorismo-de-estado-ruvte}
+#' Available at: \url{https://datos.jus.gob.ar/dataset/registro-unificado-de-victimas-del-terrorismo-de-estado-ruvte}
 #' @usage data(repression_victims_tbl_df)
 #' @export
 load("data/repression_victims_tbl_df.rda")

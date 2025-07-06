@@ -11,7 +11,7 @@ Description: Provides functions to access data from the 'ArgentinaDatos API' and
     open APIs with high-quality datasets from various domains. For more details on the 'ArgentinaDatos API',
     see <https://argentinadatos.com/> and for 'REST Countries', see <https://restcountries.com/>.
 License: GPL-3
-URL: https://github.com/lightbluetitan/argentinapi
+URL: https://github.com/lightbluetitan/argentinapi, https://lightbluetitan.github.io/argentinapi/
 BugReports: https://github.com/lightbluetitan/argentinapi/issues
 Encoding: UTF-8
 LazyData: true

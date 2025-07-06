@@ -18,8 +18,10 @@
 #' Get Official Holidays in Argentina for a Given Year
 #'
 #' This function retrieves the list of official holidays in Argentina for a specified year.
-#' The data is obtained from the public API at \url{https://api.argentinadatos.com/v1/feriados/{año}}.
-#' If no year is provided, it returns holidays for the current year.
+#' The data is obtained from the public API at \url{https://api.argentinadatos.com/v1/feriados/}.
+#' You can append the desired year at the end of the URL. For example:
+#' \url{https://api.argentinadatos.com/v1/feriados/2024/}
+#' If no year is provided, the function returns holidays for the current year.
 #'
 #' @param year An integer representing the year (between 2016 and 2025). Defaults to the current year.
 #'

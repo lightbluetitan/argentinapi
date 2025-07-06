@@ -30,7 +30,7 @@ A tibble with 8,753 observations and 20 variables:
 }
 \source{
 Based on data from the presentes package (version 0.1.0).
-        Available at: \url{http://datos.jus.gob.ar/dataset/registro-unificado-de-victimas-del-terrorismo-de-estado-ruvte}
+Available at: \url{https://datos.jus.gob.ar/dataset/registro-unificado-de-victimas-del-terrorismo-de-estado-ruvte}
 }
 \usage{
 data(repression_victims_tbl_df)

@@ -19,8 +19,10 @@ A data frame with the following columns:
 }
 \description{
 This function retrieves the list of official holidays in Argentina for a specified year.
-The data is obtained from the public API at \url{https://api.argentinadatos.com/v1/feriados/{año}}.
-If no year is provided, it returns holidays for the current year.
+The data is obtained from the public API at \url{https://api.argentinadatos.com/v1/feriados/}.
+You can append the desired year at the end of the URL. For example:
+\url{https://api.argentinadatos.com/v1/feriados/2024/}
+If no year is provided, the function returns holidays for the current year.
 }
 \details{
 The function sends a GET request to the ArgentinaDatos API and converts the JSON response into a structured

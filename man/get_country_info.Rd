@@ -23,8 +23,10 @@ A data frame with 8 columns:
 }
 }
 \description{
-Retrieves selected, essential information about Argentina or any other country by its full name,
-using the REST Countries API: \url{https://restcountries.com/v3.1/name/{name}?fullText=true}.
+Retrieves selected, essential information about Argentina or any other country by its full name.
+The data is retrieved from the REST Countries API.
+See the API documentation at \url{https://restcountries.com/}.
+Example API usage: \url{https://restcountries.com/v3.1/name/argentina?fullText=true}.
 }
 \details{
 This function returns readable details such as the country's common and official name, capital,
