@@ -1,5 +1,5 @@
-# ArgentinAPI - Access Argentine Economic, Social, and Geopolitical Data via RESTful APIs and Curated Datasets
-# Version 0.1.0
+# ArgentinAPI - Access Argentinian Data via APIs and Curated Datasets
+# Version 0.2.0
 # Copyright (C) 2025 Renzo Caceres Rossi
 #
 # This program is free software: you can redistribute it and/or modify
@@ -16,17 +16,17 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
-#' ArgentinAPI: Access Argentine Economic, Social, and Geopolitical Data via RESTful APIs and Curated Datasets
+#' ArgentinAPI: Access Argentinian Data via APIs and Curated Datasets
 #'
 #' \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 #'
-#' Access Argentine Economic, Social, and Geopolitical Data via RESTful APIs and Curated Datasets.
+#' Access Argentinian Data via APIs and Curated Datasets.
 #'
 #' @name ArgentinAPI
 #' @aliases ArgentinAPI-package
-#' @title ArgentinAPI: Access Argentine Economic, Social, and Geopolitical Data via RESTful APIs and Curated Datasets
+#' @title ArgentinAPI: Access Argentinian Data via APIs and Curated Datasets
 #' @description {
-#' This package provides functions to access data from the 'ArgentinaDatos API' and the 'REST Countries API' related to Argentina's exchange rates, inflation, political figures, holidays, and general country-level indicators, additionally, the package includes curated datasets related to Argentina, covering topics such as economic indicators, biodiversity, agriculture, human rights, genetic data, and consumer prices.
+#' This package provides functions to access data from public RESTful APIs including the 'ArgentinaDatos API', 'REST Countries API', and 'World Bank API' related to Argentina's exchange rates, inflation, political figures, holidays, economic indicators, and general country-level statistics. Additionally, the package includes curated datasets related to Argentina, covering topics such as economic indicators, biodiversity, agriculture, human rights, genetic data, and consumer prices.
 #' }
 #' @seealso {
 #' Useful links:

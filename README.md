@@ -1,10 +1,8 @@
 # ArgentinAPI
 
-The `ArgentinAPI` package provides a unified interface to access open data from the **ArgentinaDatos** API and the **REST Countries API**, with a focus on **Argentina**. It allows users to easily retrieve up-to-date information on exchange rates, inflation, political figures, national holidays, and country-level indicators relevant to **Argentina**.
+The `ArgentinAPI` package provides a comprehensive and unified interface to access open data about **Argentina** from multiple public RESTful APIs, including **ArgentinaDatos API**, **REST Countries API**, and **World Bank API**. Through these sources, users can easily retrieve information on exchange rates, inflation, political figures, national holidays, economic indicators, and general country-level statistics.
 
-In addition to API-access functions, the package includes a collection of curated datasets related to **Argentina**, covering diverse domains such as economic indicators, biodiversity, agriculture, human rights, genetics, and consumer prices.
-
-`ArgentinAPI` is designed to support research, teaching, and data analysis focused on Argentina by integrating publicly available APIs and high-quality datasets into a single, easy-to-use R package.
+In addition to API-access functions, the package includes a collection of curated datasets covering diverse domains such as economic indicators, biodiversity, agriculture, human rights, genetic data, and consumer prices.
 
 ## Installation
 
@@ -29,19 +27,36 @@ library(ArgentinAPI)
 
 ### ArgentinAPI Functions
 
-- get_argentine_deputies() This function retrieves a list of Argentine deputies
+Below is a list of the main functions included in the `ArgentinAPI` package:
 
-- get_argentine_senators() This function retrieves a list of Argentine senators
+- `get_argentina_holidays()` – Retrieves public holidays in Argentina for a specific year using the ArgentinaDatos API.
 
-- get_argentinian_holidays() This function retrieves the list of official holidays in Argentina
+- `get_argentine_senators()` -  Returns the current list of Argentine senators from the ArgentinaDatos API.
 
-- get_country_info() Retrieves selected, essential information about Argentina
+- `get_argentine_deputies()` – Returns the current list of Argentine deputies from the ArgentinaDatos API.
 
-- get_presidential_events() This function retrieves the list of presidential events in Argentina
+- `get_country_info_ar()` – Retrieves general country-level information about Argentina from the REST Countries API 
 
-- get_usd_exchange_rates() Latest exchange rates of the US dollar (USD) in Argentina
+- `get_dollar_exchange_rates()` – Retrieves the most recent exchange rates for different dollar markets (official, blue, MEP, CCL) from the ArgentinaDatos API.
 
-- view_datasets_ArgentinAPI() List of Datasets in the ArgentinAPI Package
+- `get_presidential_events()` – Retrieves a list of official presidential events from the ArgentinaDatos API.
+
+- `get_argentina_child_mortality()`: Get Argentina’s Under-5 Mortality Rate data from the World Bank.
+
+- `get_argentina_energy_use()`: Get Argentina’s Energy Use (kg of oil equivalent per capita) data from the World Bank.
+
+- `get_argentina_gdp()`: Get Argentina’s GDP (current US$) data from the World Bank. 
+ 
+- `get_argentina_hospital_beds()`: Get Argentina’s Hospital Beds (per 1,000 people) data from the World Bank. 
+
+- `get_argentina_life_expectancy()`: Get Argentina’s Life Expectancy at Birth data from the World Bank.
+
+- `get_argentina_population()`: Get Argentina’s Total Population data from the World Bank.
+
+- `get_argentina_unemployment()`: Get Argentina’s Total Unemployment Rate data from the World Bank.
+
+- `view_datasets_ArgentinAPI()` – Lists all curated datasets included in the `ArgentinAPI` package across various thematic areas such as economy, biodiversity, genetics, agriculture, and more.
+
 
 ### Some of the ArgentinAPI Datasets
 
@@ -71,7 +86,7 @@ A list of allelic frequencies for 24 Short Tandem Repeat (STR) genetic markers c
 library(ArgentinAPI)
 
 # Selected, essential information about Argentina
-get_country_info()
+get_country_info_ar()
 
 # List of presidential events in Argentina 
 get_presidential_events()

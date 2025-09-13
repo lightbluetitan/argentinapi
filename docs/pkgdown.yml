@@ -3,7 +3,7 @@ pkgdown: 2.1.3
 pkgdown_sha: ~
 articles:
   ArgentinAPI_vignette: ArgentinAPI_vignette.html
-last_built: 2025-07-06T21:49Z
+last_built: 2025-09-13T15:53Z
 urls:
   reference: https://lightbluetitan.github.io/argentinapi/reference
   article: https://lightbluetitan.github.io/argentinapi/articles

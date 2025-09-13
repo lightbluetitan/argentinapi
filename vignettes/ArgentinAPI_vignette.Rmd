@@ -1,8 +1,8 @@
 ---
-title: "ArgentinAPI: Access Argentine Economic, Social, and Geopolitical Data via RESTful APIs and Curated Datasets"
+title: "ArgentinAPI: Access Argentinian Data via APIs and Curated Datasets"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{ArgentinAPI: Access Argentine Economic, Social, and Geopolitical Data via RESTful APIs and Curated Datasets}
+  %\VignetteIndexEntry{ArgentinAPI: Access Argentinian Data via APIs and Curated Datasets}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -22,15 +22,17 @@ library(ggplot2)
 
 # Introduction
 
-The `ArgentinAPI` package provides a unified interface to access open data from the **ArgentinaDatos** API and the **REST Countries API**, with a focus on **Argentina**. It allows users to easily retrieve up-to-date information on exchange rates, inflation, political figures, national holidays, and country-level indicators relevant to **Argentina**.
+The `ArgentinAPI` package provides a comprehensive and unified interface to access open data about **Argentina** from multiple public RESTful APIs, including **ArgentinaDatos API**, **REST Countries API**, and **World Bank API**. Through these sources, users can easily retrieve information on exchange rates, inflation, political figures, national holidays, economic indicators, and general country-level statistics.
 
-In addition to API-access functions, the package includes a collection of curated datasets related to **Argentina**, covering diverse domains such as economic indicators, biodiversity, agriculture, human rights, genetics, and consumer prices.
+In addition to API-access functions, the package includes a collection of curated datasets covering diverse domains such as economic indicators, biodiversity, agriculture, human rights, genetic data, and consumer prices.
 
-`ArgentinAPI` is designed to support research, teaching, and data analysis focused on Argentina by integrating publicly available APIs and high-quality datasets into a single, easy-to-use R package.
+By integrating open APIs with high-quality datasets from multiple domains, `ArgentinAPI` supports research, teaching, and analysis focused on **Argentina**, making it a versatile tool for academics, professionals, and policymakers.
 
 ## Functions for ArgentinAPI
 
-The `ArgentinAPI` package provides several core functions to access real-time and structured information about Argentina from public APIs such as [ArgentinaDatos](https://argentinadatos.com/) and [REST Countries](https://restcountries.com/). Below is a list of the main functions included in the package:
+The `ArgentinAPI` package provides several core functions to access real-time and structured information about **Argentina** from public APIs such as [ArgentinaDatos](https://argentinadatos.com/), [REST Countries](https://restcountries.com/), and the [World Bank API](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392).  
+
+Below is a list of the main functions included in the package:
 
 - `get_argentina_holidays()` – Retrieves public holidays in Argentina for a specific year using the ArgentinaDatos API.
 
@@ -38,15 +40,29 @@ The `ArgentinAPI` package provides several core functions to access real-time an
 
 - `get_argentine_deputies()` – Returns the current list of Argentine deputies from the ArgentinaDatos API.
 
-- `get_country_info()` – Retrieves general country-level information about Argentina from the REST Countries API (e.g., population, area, time zones, etc.).
+- `get_country_info_ar()` – Retrieves general country-level information about Argentina from the REST Countries API 
 
 - `get_dollar_exchange_rates()` – Retrieves the most recent exchange rates for different dollar markets (official, blue, MEP, CCL) from the ArgentinaDatos API.
 
 - `get_presidential_events()` – Retrieves a list of official presidential events from the ArgentinaDatos API.
 
+- `get_argentina_child_mortality()`: Get Argentina’s Under-5 Mortality Rate data from the World Bank.
+
+- `get_argentina_energy_use()`: Get Argentina’s Energy Use (kg of oil equivalent per capita) data from the World Bank.
+
+- `get_argentina_gdp()`: Get Argentina’s GDP (current US$) data from the World Bank. 
+ 
+- `get_argentina_hospital_beds()`: Get Argentina’s Hospital Beds (per 1,000 people) data from the World Bank. 
+
+- `get_argentina_life_expectancy()`: Get Argentina’s Life Expectancy at Birth data from the World Bank.
+
+- `get_argentina_population()`: Get Argentina’s Total Population data from the World Bank.
+
+- `get_argentina_unemployment()`: Get Argentina’s Total Unemployment Rate data from the World Bank.
+
 - `view_datasets_ArgentinAPI()` – Lists all curated datasets included in the `ArgentinAPI` package across various thematic areas such as economy, biodiversity, genetics, agriculture, and more.
 
-These functions allow users to access high-quality and structured information on Argentina, which can be combined with tools like `dplyr`, `tidyr`, and `ggplot2` to support a wide range of data analysis and visualization tasks. In the following sections, you’ll find examples on how to work with `ArgentinAPI` in practical scenarios.
+These functions allow users to access high-quality and structured information on **Argentina**, which can be combined with tools like `dplyr`, `tidyr`, and `ggplot2` to support a wide range of data analysis and visualization tasks. In the following sections, you’ll find examples on how to work with `ArgentinAPI` in practical scenarios.
 
 
 ### List of Argentine Senators
@@ -58,6 +74,29 @@ These functions allow users to access high-quality and structured information on
 argentine_senators <- head(get_argentine_senators(),n=10)
 
 print(argentine_senators)
+
+```
+
+
+### Argentina's GDP (Current US$) from World Bank 2022 - 2017
+
+```{r argentina-gdp,echo = TRUE,message = FALSE,warning = FALSE,results = 'markup'}
+
+
+argentina_gdp <- head(get_argentina_gdp())
+
+print(argentina_gdp)
+
+```
+
+
+### Argentina's Life Expectancy at Birth from World Bank 2022 - 2017
+
+```{r argentina-life-expectancy,echo = TRUE,message = FALSE,warning = FALSE,results = 'markup'}
+
+argentina_life_expectancy <- head(get_argentina_life_expectancy())
+
+print(argentina_life_expectancy)
 
 ```
 
@@ -115,6 +154,9 @@ A list of allelic frequencies for 24 Short Tandem Repeat (STR) genetic markers c
 
 ## Conclusion
 
-The `ArgentinAPI` package provides a powerful suite of tools to access public data from Argentina through curated datasets and API connectors. Whether analyzing economic trends, exploring georeferenced crop productivity, or studying population genetics, this package enables rich, reproducible analysis rooted in official and scientifically valuable data.
+The **`ArgentinAPI`** package brings together **public RESTful APIs**—including [ArgentinaDatos](https://argentinadatos.com/), [REST Countries](https://restcountries.com/), and the [World Bank API](https://datahelpdesk.worldbank.org/knowledgebase/articles/889392)—with a collection of **curated datasets** covering domains such as economic indicators, biodiversity, agriculture, human rights, genetic data, and consumer prices.  
+
+By integrating these diverse sources, the package enables **comprehensive, reproducible, and high-quality research and analysis** focused on Argentina. Whether the goal is to study **macroeconomic trends**, evaluate **environmental and agricultural data**, or explore **social and genetic indicators**, `ArgentinAPI` provides a **versatile and reliable toolkit** for researchers, educators, policymakers, and data enthusiasts.  
+
 
 <div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>

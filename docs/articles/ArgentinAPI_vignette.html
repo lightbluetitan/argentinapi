@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>ArgentinAPI: Access Argentine Economic, Social, and Geopolitical Data via RESTful APIs and Curated Datasets • ArgentinAPI</title>
+<title>ArgentinAPI: Access Argentinian Data via APIs and Curated Datasets • ArgentinAPI</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
 <link rel="icon" type="”image/svg+xml”" href="../favicon.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
@@ -15,7 +15,7 @@
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="ArgentinAPI: Access Argentine Economic, Social, and Geopolitical Data via RESTful APIs and Curated Datasets">
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="ArgentinAPI: Access Argentinian Data via APIs and Curated Datasets">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -25,7 +25,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">ArgentinAPI</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,9 +38,10 @@
 <li class="active nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="../articles/ArgentinAPI_vignette.html">ArgentinAPI: Access Argentine Economic, Social, and Geopolitical Data via RESTful APIs and Curated Datasets</a></li>
+<li><a class="dropdown-item" href="../articles/ArgentinAPI_vignette.html">ArgentinAPI: Access Argentinian Data via APIs and Curated Datasets</a></li>
   </ul>
 </li>
+<li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul>
 <ul class="navbar-nav">
 <li class="nav-item"><form class="form-inline" role="search">
@@ -59,7 +60,7 @@
 
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="../logo.png" class="logo" alt=""><h1>ArgentinAPI: Access Argentine Economic, Social, and Geopolitical Data via RESTful APIs and Curated Datasets</h1>
+      <img src="../logo.png" class="logo" alt=""><h1>ArgentinAPI: Access Argentinian Data via APIs and Curated Datasets</h1>
             
       
       <small class="dont-index">Source: <a href="https://github.com/lightbluetitan/argentinapi/blob/HEAD/vignettes/ArgentinAPI_vignette.Rmd" class="external-link"><code>vignettes/ArgentinAPI_vignette.Rmd</code></a></small>
@@ -83,27 +84,29 @@
 <div class="section level2">
 <h2 id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
-<p>The <code>ArgentinAPI</code> package provides a unified interface to
-access open data from the <strong>ArgentinaDatos</strong> API and the
-<strong>REST Countries API</strong>, with a focus on
-<strong>Argentina</strong>. It allows users to easily retrieve
-up-to-date information on exchange rates, inflation, political figures,
-national holidays, and country-level indicators relevant to
-<strong>Argentina</strong>.</p>
+<p>The <code>ArgentinAPI</code> package provides a comprehensive and
+unified interface to access open data about <strong>Argentina</strong>
+from multiple public RESTful APIs, including <strong>ArgentinaDatos
+API</strong>, <strong>REST Countries API</strong>, and <strong>World
+Bank API</strong>. Through these sources, users can easily retrieve
+information on exchange rates, inflation, political figures, national
+holidays, economic indicators, and general country-level statistics.</p>
 <p>In addition to API-access functions, the package includes a
-collection of curated datasets related to <strong>Argentina</strong>,
-covering diverse domains such as economic indicators, biodiversity,
-agriculture, human rights, genetics, and consumer prices.</p>
-<p><code>ArgentinAPI</code> is designed to support research, teaching,
-and data analysis focused on Argentina by integrating publicly available
-APIs and high-quality datasets into a single, easy-to-use R package.</p>
+collection of curated datasets covering diverse domains such as economic
+indicators, biodiversity, agriculture, human rights, genetic data, and
+consumer prices.</p>
+<p>By integrating open APIs with high-quality datasets from multiple
+domains, <code>ArgentinAPI</code> supports research, teaching, and
+analysis focused on <strong>Argentina</strong>, making it a versatile
+tool for academics, professionals, and policymakers.</p>
 <div class="section level3">
 <h3 id="functions-for-argentinapi">Functions for ArgentinAPI<a class="anchor" aria-label="anchor" href="#functions-for-argentinapi"></a>
 </h3>
 <p>The <code>ArgentinAPI</code> package provides several core functions
-to access real-time and structured information about Argentina from
-public APIs such as <a href="https://argentinadatos.com/" class="external-link">ArgentinaDatos</a> and <a href="https://restcountries.com/" class="external-link">REST Countries</a>. Below is a list of
-the main functions included in the package:</p>
+to access real-time and structured information about
+<strong>Argentina</strong> from public APIs such as <a href="https://argentinadatos.com/" class="external-link">ArgentinaDatos</a>, <a href="https://restcountries.com/" class="external-link">REST Countries</a>, and the <a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/889392" class="external-link">World
+Bank API</a>.</p>
+<p>Below is a list of the main functions included in the package:</p>
 <ul>
 <li><p><code>get_argentina_holidays()</code> – Retrieves public holidays
 in Argentina for a specific year using the ArgentinaDatos API.</p></li>
@@ -111,25 +114,39 @@ in Argentina for a specific year using the ArgentinaDatos API.</p></li>
 of Argentine senators from the ArgentinaDatos API.</p></li>
 <li><p><code><a href="../reference/get_argentine_deputies.html">get_argentine_deputies()</a></code> – Returns the current list
 of Argentine deputies from the ArgentinaDatos API.</p></li>
-<li><p><code><a href="../reference/get_country_info.html">get_country_info()</a></code> – Retrieves general country-level
-information about Argentina from the REST Countries API (e.g.,
-population, area, time zones, etc.).</p></li>
+<li><p><code><a href="../reference/get_country_info_ar.html">get_country_info_ar()</a></code> – Retrieves general
+country-level information about Argentina from the REST Countries
+API</p></li>
 <li><p><code>get_dollar_exchange_rates()</code> – Retrieves the most
 recent exchange rates for different dollar markets (official, blue, MEP,
 CCL) from the ArgentinaDatos API.</p></li>
 <li><p><code><a href="../reference/get_presidential_events.html">get_presidential_events()</a></code> – Retrieves a list of
 official presidential events from the ArgentinaDatos API.</p></li>
+<li><p><code><a href="../reference/get_argentina_child_mortality.html">get_argentina_child_mortality()</a></code>: Get Argentina’s
+Under-5 Mortality Rate data from the World Bank.</p></li>
+<li><p><code><a href="../reference/get_argentina_energy_use.html">get_argentina_energy_use()</a></code>: Get Argentina’s Energy
+Use (kg of oil equivalent per capita) data from the World Bank.</p></li>
+<li><p><code><a href="../reference/get_argentina_gdp.html">get_argentina_gdp()</a></code>: Get Argentina’s GDP (current
+US$) data from the World Bank.</p></li>
+<li><p><code><a href="../reference/get_argentina_hospital_beds.html">get_argentina_hospital_beds()</a></code>: Get Argentina’s
+Hospital Beds (per 1,000 people) data from the World Bank.</p></li>
+<li><p><code><a href="../reference/get_argentina_life_expectancy.html">get_argentina_life_expectancy()</a></code>: Get Argentina’s
+Life Expectancy at Birth data from the World Bank.</p></li>
+<li><p><code><a href="../reference/get_argentina_population.html">get_argentina_population()</a></code>: Get Argentina’s Total
+Population data from the World Bank.</p></li>
+<li><p><code><a href="../reference/get_argentina_unemployment.html">get_argentina_unemployment()</a></code>: Get Argentina’s Total
+Unemployment Rate data from the World Bank.</p></li>
 <li><p><code><a href="../reference/view_datasets_ArgentinAPI.html">view_datasets_ArgentinAPI()</a></code> – Lists all curated
 datasets included in the <code>ArgentinAPI</code> package across various
 thematic areas such as economy, biodiversity, genetics, agriculture, and
 more.</p></li>
 </ul>
 <p>These functions allow users to access high-quality and structured
-information on Argentina, which can be combined with tools like
-<code>dplyr</code>, <code>tidyr</code>, and <code>ggplot2</code> to
-support a wide range of data analysis and visualization tasks. In the
-following sections, you’ll find examples on how to work with
-<code>ArgentinAPI</code> in practical scenarios.</p>
+information on <strong>Argentina</strong>, which can be combined with
+tools like <code>dplyr</code>, <code>tidyr</code>, and
+<code>ggplot2</code> to support a wide range of data analysis and
+visualization tasks. In the following sections, you’ll find examples on
+how to work with <code>ArgentinAPI</code> in practical scenarios.</p>
 <div class="section level4">
 <h4 id="list-of-argentine-senators">List of Argentine Senators<a class="anchor" aria-label="anchor" href="#list-of-argentine-senators"></a>
 </h4>
@@ -155,9 +172,47 @@ following sections, you’ll find examples on how to work with
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 563   Olivera Lucero, Bruno Antonio San Juan   Alianza… 2023-12-10 2029-12-09</span></span></code></pre></div>
 </div>
 <div class="section level4">
-<h4 id="corn-yield-response-to-nitrogen-levels">Corn Yield Response to Nitrogen Levels<a class="anchor" aria-label="anchor" href="#corn-yield-response-to-nitrogen-levels"></a>
+<h4 id="argentinas-gdp-current-us-from-world-bank-2022---2017">Argentina’s GDP (Current US$) from World Bank 2022 - 2017<a class="anchor" aria-label="anchor" href="#argentinas-gdp-current-us-from-world-bank-2022---2017"></a>
 </h4>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span></span>
+<span><span class="va">argentina_gdp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu"><a href="../reference/get_argentina_gdp.html">get_argentina_gdp</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">argentina_gdp</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 × 5</span></span></span>
+<span><span class="co">#&gt;   indicator         country    year         value value_label    </span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> GDP (current US$) Argentina  <span style="text-decoration: underline;">2</span>022 <span style="text-decoration: underline;">632</span>790<span style="text-decoration: underline;">070</span>063. 632,790,070,063</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> GDP (current US$) Argentina  <span style="text-decoration: underline;">2</span>021 <span style="text-decoration: underline;">486</span>564<span style="text-decoration: underline;">085</span>480. 486,564,085,480</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> GDP (current US$) Argentina  <span style="text-decoration: underline;">2</span>020 <span style="text-decoration: underline;">385</span>740<span style="text-decoration: underline;">508</span>437. 385,740,508,437</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> GDP (current US$) Argentina  <span style="text-decoration: underline;">2</span>019 <span style="text-decoration: underline;">447</span>754<span style="text-decoration: underline;">683</span>615. 447,754,683,615</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> GDP (current US$) Argentina  <span style="text-decoration: underline;">2</span>018 <span style="text-decoration: underline;">524</span>819<span style="text-decoration: underline;">892</span>360. 524,819,892,360</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> GDP (current US$) Argentina  <span style="text-decoration: underline;">2</span>017 <span style="text-decoration: underline;">643</span>628<span style="text-decoration: underline;">393</span>281. 643,628,393,281</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="argentinas-life-expectancy-at-birth-from-world-bank-2022---2017">Argentina’s Life Expectancy at Birth from World Bank 2022 -
+2017<a class="anchor" aria-label="anchor" href="#argentinas-life-expectancy-at-birth-from-world-bank-2022---2017"></a>
+</h4>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span><span class="va">argentina_life_expectancy</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu"><a href="../reference/get_argentina_life_expectancy.html">get_argentina_life_expectancy</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">argentina_life_expectancy</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 × 4</span></span></span>
+<span><span class="co">#&gt;   indicator                               country    year value</span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> Life expectancy at birth, total (years) Argentina  <span style="text-decoration: underline;">2</span>022  75.8</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> Life expectancy at birth, total (years) Argentina  <span style="text-decoration: underline;">2</span>021  73.9</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> Life expectancy at birth, total (years) Argentina  <span style="text-decoration: underline;">2</span>020  75.9</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> Life expectancy at birth, total (years) Argentina  <span style="text-decoration: underline;">2</span>019  76.8</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> Life expectancy at birth, total (years) Argentina  <span style="text-decoration: underline;">2</span>018  76.8</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> Life expectancy at birth, total (years) Argentina  <span style="text-decoration: underline;">2</span>017  76.5</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="corn-yield-response-to-nitrogen-levels">Corn Yield Response to Nitrogen Levels<a class="anchor" aria-label="anchor" href="#corn-yield-response-to-nitrogen-levels"></a>
+</h4>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="co"># Summary: average corn yield by nitrogen level</span></span>
 <span><span class="va">corn_summary</span> <span class="op">&lt;-</span> <span class="va">corn_nitrogen_df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
@@ -214,12 +269,19 @@ Argentina.</p></li>
 <div class="section level3">
 <h3 id="conclusion">Conclusion<a class="anchor" aria-label="anchor" href="#conclusion"></a>
 </h3>
-<p>The <code>ArgentinAPI</code> package provides a powerful suite of
-tools to access public data from Argentina through curated datasets and
-API connectors. Whether analyzing economic trends, exploring
-georeferenced crop productivity, or studying population genetics, this
-package enables rich, reproducible analysis rooted in official and
-scientifically valuable data.</p>
+<p>The <strong><code>ArgentinAPI</code></strong> package brings together
+<strong>public RESTful APIs</strong>—including <a href="https://argentinadatos.com/" class="external-link">ArgentinaDatos</a>, <a href="https://restcountries.com/" class="external-link">REST Countries</a>, and the <a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/889392" class="external-link">World
+Bank API</a>—with a collection of <strong>curated datasets</strong>
+covering domains such as economic indicators, biodiversity, agriculture,
+human rights, genetic data, and consumer prices.</p>
+<p>By integrating these diverse sources, the package enables
+<strong>comprehensive, reproducible, and high-quality research and
+analysis</strong> focused on Argentina. Whether the goal is to study
+<strong>macroeconomic trends</strong>, evaluate <strong>environmental
+and agricultural data</strong>, or explore <strong>social and genetic
+indicators</strong>, <code>ArgentinAPI</code> provides a
+<strong>versatile and reliable toolkit</strong> for researchers,
+educators, policymakers, and data enthusiasts.</p>
 <div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;">
 
 </div>
